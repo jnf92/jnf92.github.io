@@ -1,6 +1,17 @@
-title: jnf92
-description: Sitio personal de jnf92
+title: FCE English Lab
+description: Preparación práctica para Cambridge B2 First
 url: "https://jnf92.github.io"
 baseurl: ""
-theme: minima
 lang: es
+permalink: /articles/:categories/:title/
+paginate: 6
+paginate_path: "/page/:num/"
+plugins:
+  - jekyll-paginate
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: jnf92
