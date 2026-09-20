@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article class="post wrap">
+  <header class="post-header">
+    <div class="eyebrow">{{ page.category }} · {{ page.subcategory }}</div>
+    <h1>{{ page.title }}</h1>
+    <p class="post-summary">{{ page.description }}</p>
+    <div class="meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d/%m/%Y" }}</time><span>·</span><span>{{ page.reading_time | default: "6 min" }}</span></div>
+    <div class="tag-row">{% for tag in page.tags %}<span class="tag">#{{ tag }}</span>{% endfor %}</div>
+  </header>
+  <div class="post-content">{{ content }}</div>
+  <aside class="post-cta">
+    <strong>Sigue practicando</strong>
+    <p>Vuelve al archivo para encontrar más ejercicios y estrategias de B2 First.</p>
+    <a class="button" href="{{ '/' | relative_url }}">Ver todos los artículos</a>
+  </aside>
+</article>
